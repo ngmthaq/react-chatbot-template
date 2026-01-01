@@ -1,0 +1,133 @@
+{
+  "translation": {
+    "helloWorld": "Hello World",
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your account to continue",
+      "continueWithGoogle": "Continue with Google",
+      "continueWithGithub": "Continue with GitHub",
+      "or": "OR",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "forgot": "You forgot your password?",
+      "signIn": "Sign In",
+      "signingIn": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create one now",
+      "validation": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email address",
+        "passwordRequired": "Password is required",
+        "passwordMin": "Password must be at least 6 characters"
+      }
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join us and start chatting today",
+      "signUpWithGoogle": "Sign up with Google",
+      "signUpWithGithub": "Sign up with GitHub",
+      "or": "OR",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Create a password",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your password",
+      "agreeTerms": "I agree to the Terms of Service and Privacy Policy",
+      "createAccount": "Create Account",
+      "creatingAccount": "Creating account...",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in here",
+      "validation": {
+        "nameRequired": "Name is required",
+        "nameMin": "Name must be at least 2 characters",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email address",
+        "passwordRequired": "Password is required",
+        "passwordMin": "Password must be at least 6 characters",
+        "confirmPasswordRequired": "Please confirm your password",
+        "passwordMatch": "Passwords must match",
+        "termsRequired": "You must agree to the terms"
+      }
+    },
+    "forgotPassword": {
+      "title": "Reset Password",
+      "subtitle": "Enter your email address and we'll send you a link to reset your password.",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "sendResetLink": "Send Reset Link",
+      "sending": "Sending...",
+      "backToLogin": "Back to login",
+      "checkEmail": "Check Your Email",
+      "sentMessage": "We've sent a password reset link to your email address.",
+      "instruction": "Click the link in the email to reset your password. The link will expire in 24 hours.",
+      "notReceived": "Didn't receive an email?",
+      "tryAnother": "Try another email",
+      "validation": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email address"
+      }
+    },
+    "resetPassword": {
+      "title": "Create New Password",
+      "subtitle": "Enter a new password for your account.",
+      "passwordLabel": "New Password",
+      "passwordPlaceholder": "Enter new password",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm new password",
+      "resetPassword": "Reset Password",
+      "resetting": "Resetting...",
+      "backToLogin": "Back to login",
+      "weakPassword": "Weak password",
+      "fairPassword": "Fair password",
+      "strongPassword": "Strong password",
+      "invalidToken": "Invalid or missing reset token. Please request a new password reset.",
+      "requestNewLink": "Request New Link",
+      "successTitle": "Password Reset Successful",
+      "successMessage": "Your password has been successfully reset.",
+      "successInstruction": "You can now log in with your new password.",
+      "goToLogin": "Go to Login",
+      "validation": {
+        "passwordRequired": "Password is required",
+        "passwordMin": "Password must be at least 8 characters",
+        "confirmPasswordRequired": "Please confirm your password",
+        "passwordMatch": "Passwords must match"
+      }
+    },
+    "profile": {
+      "title": "Profile",
+      "fullName": "Full Name",
+      "email": "Email",
+      "bio": "Bio",
+      "save": "Save",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "joined": "Joined",
+      "conversations": "Conversations",
+      "messages": "Messages",
+      "hoursActive": "Hours Active",
+      "activityStats": "Activity Stats",
+      "accountSettings": "Account Settings",
+      "changePassword": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "twoFactorAuth": "Two-Factor Authentication",
+      "logout": "Logout"
+    },
+    "chat": {
+      "newConversation": "New Conversation",
+      "conversations": "Conversations",
+      "activeNow": "Active now",
+      "placeholder": "Type your message here...",
+      "send": "Send",
+      "deleteConversation": "Delete",
+      "noConversations": "No conversations yet",
+      "startChatting": "Start a new conversation"
+    }
+  }
+}

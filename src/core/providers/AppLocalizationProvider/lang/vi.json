@@ -1,0 +1,133 @@
+{
+  "translation": {
+    "helloWorld": "Xin chào",
+    "login": {
+      "title": "Chào Mừng Trở Lại",
+      "subtitle": "Đăng nhập vào tài khoản của bạn để tiếp tục",
+      "continueWithGoogle": "Tiếp tục với Google",
+      "continueWithGithub": "Tiếp tục với GitHub",
+      "or": "HOẶC",
+      "emailLabel": "Địa Chỉ Email",
+      "emailPlaceholder": "email@cua-ban.com",
+      "passwordLabel": "Mật Khẩu",
+      "passwordPlaceholder": "Nhập mật khẩu của bạn",
+      "forgot": "Bạn quên mật khẩu?",
+      "signIn": "Đăng Nhập",
+      "signingIn": "Đang đăng nhập...",
+      "noAccount": "Chưa có tài khoản?",
+      "createAccount": "Tạo ngay",
+      "validation": {
+        "emailRequired": "Email là bắt buộc",
+        "emailInvalid": "Địa chỉ email không hợp lệ",
+        "passwordRequired": "Mật khẩu là bắt buộc",
+        "passwordMin": "Mật khẩu phải có ít nhất 6 ký tự"
+      }
+    },
+    "register": {
+      "title": "Tạo Tài Khoản",
+      "subtitle": "Tham gia với chúng tôi và bắt đầu trò chuyện ngay hôm nay",
+      "signUpWithGoogle": "Đăng ký với Google",
+      "signUpWithGithub": "Đăng ký với GitHub",
+      "or": "HOẶC",
+      "nameLabel": "Họ và Tên",
+      "namePlaceholder": "Nguyễn Văn A",
+      "emailLabel": "Địa Chỉ Email",
+      "emailPlaceholder": "email@cua-ban.com",
+      "passwordLabel": "Mật Khẩu",
+      "passwordPlaceholder": "Tạo mật khẩu",
+      "confirmPasswordLabel": "Xác Nhận Mật Khẩu",
+      "confirmPasswordPlaceholder": "Xác nhận mật khẩu của bạn",
+      "agreeTerms": "Tôi đồng ý với Điều Khoản Dịch Vụ và Chính Sách Bảo Mật",
+      "createAccount": "Tạo Tài Khoản",
+      "creatingAccount": "Đang tạo tài khoản...",
+      "haveAccount": "Đã có tài khoản?",
+      "signIn": "Đăng nhập tại đây",
+      "validation": {
+        "nameRequired": "Tên là bắt buộc",
+        "nameMin": "Tên phải có ít nhất 2 ký tự",
+        "emailRequired": "Email là bắt buộc",
+        "emailInvalid": "Địa chỉ email không hợp lệ",
+        "passwordRequired": "Mật khẩu là bắt buộc",
+        "passwordMin": "Mật khẩu phải có ít nhất 6 ký tự",
+        "confirmPasswordRequired": "Vui lòng xác nhận mật khẩu của bạn",
+        "passwordMatch": "Mật khẩu phải khớp",
+        "termsRequired": "Bạn phải đồng ý với điều khoản"
+      }
+    },
+    "forgotPassword": {
+      "title": "Đặt Lại Mật Khẩu",
+      "subtitle": "Nhập địa chỉ email của bạn và chúng tôi sẽ gửi cho bạn liên kết để đặt lại mật khẩu.",
+      "emailLabel": "Địa Chỉ Email",
+      "emailPlaceholder": "email@cua-ban.com",
+      "sendResetLink": "Gửi Liên Kết Đặt Lại",
+      "sending": "Đang gửi...",
+      "backToLogin": "Quay lại đăng nhập",
+      "checkEmail": "Kiểm Tra Email Của Bạn",
+      "sentMessage": "Chúng tôi đã gửi liên kết đặt lại mật khẩu đến địa chỉ email của bạn.",
+      "instruction": "Nhấp vào liên kết trong email để đặt lại mật khẩu của bạn. Liên kết sẽ hết hạn sau 24 giờ.",
+      "notReceived": "Không nhận được email?",
+      "tryAnother": "Thử email khác",
+      "validation": {
+        "emailRequired": "Email là bắt buộc",
+        "emailInvalid": "Địa chỉ email không hợp lệ"
+      }
+    },
+    "resetPassword": {
+      "title": "Tạo Mật Khẩu Mới",
+      "subtitle": "Nhập mật khẩu mới cho tài khoản của bạn.",
+      "passwordLabel": "Mật Khẩu Mới",
+      "passwordPlaceholder": "Nhập mật khẩu mới",
+      "confirmPasswordLabel": "Xác Nhận Mật Khẩu",
+      "confirmPasswordPlaceholder": "Xác nhận mật khẩu mới",
+      "resetPassword": "Đặt Lại Mật Khẩu",
+      "resetting": "Đang đặt lại...",
+      "backToLogin": "Quay lại đăng nhập",
+      "weakPassword": "Mật khẩu yếu",
+      "fairPassword": "Mật khẩu khá",
+      "strongPassword": "Mật khẩu mạnh",
+      "invalidToken": "Mã đặt lại không hợp lệ hoặc bị thiếu. Vui lòng yêu cầu đặt lại mật khẩu mới.",
+      "requestNewLink": "Yêu Cầu Liên Kết Mới",
+      "successTitle": "Đặt Lại Mật Khẩu Thành Công",
+      "successMessage": "Mật khẩu của bạn đã được đặt lại thành công.",
+      "successInstruction": "Bạn có thể đăng nhập bằng mật khẩu mới của mình ngay bây giờ.",
+      "goToLogin": "Đi Đến Trang Đăng Nhập",
+      "validation": {
+        "passwordRequired": "Mật khẩu là bắt buộc",
+        "passwordMin": "Mật khẩu phải có ít nhất 8 ký tự",
+        "confirmPasswordRequired": "Vui lòng xác nhận mật khẩu của bạn",
+        "passwordMatch": "Mật khẩu phải khớp"
+      }
+    },
+    "profile": {
+      "title": "Hồ sơ",
+      "fullName": "Họ và Tên",
+      "email": "Email",
+      "bio": "Tiểu sử",
+      "save": "Lưu",
+      "cancel": "Hủy",
+      "edit": "Chỉnh sửa",
+      "joined": "Tham gia",
+      "conversations": "Cuộc trò chuyện",
+      "messages": "Tin nhắn",
+      "hoursActive": "Giờ hoạt động",
+      "activityStats": "Thống kê hoạt động",
+      "accountSettings": "Cài đặt tài khoản",
+      "changePassword": "Đổi mật khẩu",
+      "currentPassword": "Mật khẩu hiện tại",
+      "newPassword": "Mật khẩu mới",
+      "confirmPassword": "Xác nhận mật khẩu",
+      "twoFactorAuth": "Xác thực hai yếu tố",
+      "logout": "Đăng xuất"
+    },
+    "chat": {
+      "newConversation": "Cuộc trò chuyện mới",
+      "conversations": "Cuộc trò chuyện",
+      "activeNow": "Đang hoạt động",
+      "placeholder": "Nhập tin nhắn của bạn ở đây...",
+      "send": "Gửi",
+      "deleteConversation": "Xóa",
+      "noConversations": "Chưa có cuộc trò chuyện nào",
+      "startChatting": "Bắt đầu cuộc trò chuyện mới"
+    }
+  }
+}
