@@ -1,8 +1,7 @@
-import type { PaginationPayload } from "../schemas/messageSchema";
-import { useQuery, queryOptions } from "@tanstack/react-query";
-import { queryKeys } from "@/core/constants/queryKeys";
-import { messageService } from "@/services/messageService";
-import { messageSchema } from "../schemas/messageSchema";
+import { queryOptions, useQuery } from "@tanstack/react-query";
+import { queryKeys } from "../constants";
+import { messageSchema, type PaginationPayload } from "../schemas";
+import { messageService } from "../services";
 
 export const getMessagesOptions = (
   conversationId: string,

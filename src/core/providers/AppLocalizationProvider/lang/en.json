@@ -134,7 +134,9 @@
       "send": "Send",
       "deleteConversation": "Delete",
       "noConversations": "No conversations yet",
-      "startChatting": "Start a new conversation"
+      "startChatting": "Start a new conversation",
+      "hideSidebar": "Hide sidebar",
+      "showSidebar": "Show sidebar"
     }
   }
 }

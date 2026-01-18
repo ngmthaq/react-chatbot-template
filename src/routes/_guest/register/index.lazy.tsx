@@ -1,7 +1,5 @@
 import {
-  Box,
   Container,
-  Paper,
   TextField,
   Button,
   Typography,
@@ -16,6 +14,7 @@ import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
 import * as yup from "yup";
 import { useRegister } from "@/core/hooks/useRegister";
+import { RegisterContainer, RegisterPaper } from "./-styled";
 
 export const Route = createLazyFileRoute("/_guest/register/")({
   component: RegisterPage,
@@ -76,8 +75,8 @@ function RegisterPage() {
 
   return (
     <Container maxWidth="sm">
-      <Box sx={{ marginTop: 8 }}>
-        <Paper sx={{ p: 4, width: "100%", maxWidth: 450 }}>
+      <RegisterContainer>
+        <RegisterPaper>
           <Typography variant="h4" align="center" gutterBottom>
             {t("register.title")}
           </Typography>
@@ -209,8 +208,8 @@ function RegisterPage() {
               <Link to="/login">{t("register.signIn")}</Link>
             </Typography>
           </Stack>
-        </Paper>
-      </Box>
+        </RegisterPaper>
+      </RegisterContainer>
     </Container>
   );
 }

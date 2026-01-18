@@ -1,8 +1,6 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import {
-  Box,
   Container,
-  Paper,
   Button,
   Typography,
   TextField,
@@ -15,6 +13,18 @@ import {
 import { createLazyFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import {
+  ProfilePageContainer,
+  ProfileContentWrapper,
+  ProfilePaper,
+  ProfileHeader,
+  ProfileHeaderSpacer,
+  ProfileFormContainer,
+  ProfileFormField,
+  ProfileFormLabel,
+  ProfileActionsContainer,
+  PasswordDialogContent,
+} from "./-styled";
 
 export const Route = createLazyFileRoute("/_auth/profile/")({
   component: ProfilePage,
@@ -66,19 +76,12 @@ function ProfilePage() {
   };
 
   return (
-    <Box>
-      <Box sx={{ marginTop: 2 }}>
+    <ProfilePageContainer>
+      <ProfileContentWrapper>
         <Container maxWidth="sm" sx={{ py: 4 }}>
           {/* Profile Header Card */}
-          <Paper elevation={2} sx={{ borderRadius: 1.5, p: 4, mb: 4 }}>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                mb: 2,
-              }}
-            >
+          <ProfilePaper elevation={2}>
+            <ProfileHeader>
               <IconButton
                 onClick={handleBackToChat}
                 size="small"
@@ -89,18 +92,19 @@ function ProfilePage() {
               <Typography variant="h6" fontWeight="600">
                 {t("profile.title")}
               </Typography>
-              <Box sx={{ width: 40 }} />
-            </Box>
-            <Box sx={{ flex: 1 }}>
-              <Box sx={{ mb: 2 }}>
-                <Typography
-                  variant="caption"
-                  color="textSecondary"
-                  display="block"
-                  sx={{ mb: 0.5 }}
-                >
-                  {t("profile.fullName")}
-                </Typography>
+              <ProfileHeaderSpacer />
+            </ProfileHeader>
+            <ProfileFormContainer>
+              <ProfileFormField>
+                <ProfileFormLabel>
+                  <Typography
+                    variant="caption"
+                    color="textSecondary"
+                    display="block"
+                  >
+                    {t("profile.fullName")}
+                  </Typography>
+                </ProfileFormLabel>
                 <TextField
                   fullWidth
                   value={editForm.name}
@@ -109,32 +113,34 @@ function ProfilePage() {
                   }
                   variant="outlined"
                 />
-              </Box>
-              <Box sx={{ mb: 2 }}>
-                <Typography
-                  variant="caption"
-                  color="textSecondary"
-                  display="block"
-                  sx={{ mb: 0.5 }}
-                >
-                  {t("profile.email")}
-                </Typography>
+              </ProfileFormField>
+              <ProfileFormField>
+                <ProfileFormLabel>
+                  <Typography
+                    variant="caption"
+                    color="textSecondary"
+                    display="block"
+                  >
+                    {t("profile.email")}
+                  </Typography>
+                </ProfileFormLabel>
                 <TextField
                   fullWidth
                   value={editForm.email}
                   disabled
                   variant="outlined"
                 />
-              </Box>
-              <Box sx={{ mb: 2 }}>
-                <Typography
-                  variant="caption"
-                  color="textSecondary"
-                  display="block"
-                  sx={{ mb: 0.5 }}
-                >
-                  {t("profile.bio")}
-                </Typography>
+              </ProfileFormField>
+              <ProfileFormField>
+                <ProfileFormLabel>
+                  <Typography
+                    variant="caption"
+                    color="textSecondary"
+                    display="block"
+                  >
+                    {t("profile.bio")}
+                  </Typography>
+                </ProfileFormLabel>
                 <TextField
                   fullWidth
                   value={editForm.bio}
@@ -145,19 +151,19 @@ function ProfilePage() {
                   multiline
                   rows={3}
                 />
-              </Box>
-              <Box sx={{ display: "flex", gap: 2 }}>
+              </ProfileFormField>
+              <ProfileActionsContainer>
                 <Button variant="contained" onClick={handleSave}>
                   {t("profile.save")}
                 </Button>
                 <Button variant="outlined" onClick={handleOpenPasswordDialog}>
                   {t("profile.changePassword")}
                 </Button>
-              </Box>
-            </Box>
-          </Paper>
+              </ProfileActionsContainer>
+            </ProfileFormContainer>
+          </ProfilePaper>
         </Container>
-      </Box>
+      </ProfileContentWrapper>
 
       {/* Change Password Dialog */}
       <Dialog
@@ -167,46 +173,51 @@ function ProfilePage() {
         fullWidth
       >
         <DialogTitle>{t("profile.changePassword")}</DialogTitle>
-        <DialogContent sx={{ pt: 2 }}>
-          <TextField
-            fullWidth
-            type="password"
-            label={t("profile.currentPassword")}
-            value={passwordForm.currentPassword}
-            onChange={(e) =>
-              setPasswordForm({
-                ...passwordForm,
-                currentPassword: e.target.value,
-              })
-            }
-            variant="outlined"
-            margin="normal"
-          />
-          <TextField
-            fullWidth
-            type="password"
-            label={t("profile.newPassword")}
-            value={passwordForm.newPassword}
-            onChange={(e) =>
-              setPasswordForm({ ...passwordForm, newPassword: e.target.value })
-            }
-            variant="outlined"
-            margin="normal"
-          />
-          <TextField
-            fullWidth
-            type="password"
-            label={t("profile.confirmPassword")}
-            value={passwordForm.confirmPassword}
-            onChange={(e) =>
-              setPasswordForm({
-                ...passwordForm,
-                confirmPassword: e.target.value,
-              })
-            }
-            variant="outlined"
-            margin="normal"
-          />
+        <DialogContent>
+          <PasswordDialogContent>
+            <TextField
+              fullWidth
+              type="password"
+              label={t("profile.currentPassword")}
+              value={passwordForm.currentPassword}
+              onChange={(e) =>
+                setPasswordForm({
+                  ...passwordForm,
+                  currentPassword: e.target.value,
+                })
+              }
+              variant="outlined"
+              margin="normal"
+            />
+            <TextField
+              fullWidth
+              type="password"
+              label={t("profile.newPassword")}
+              value={passwordForm.newPassword}
+              onChange={(e) =>
+                setPasswordForm({
+                  ...passwordForm,
+                  newPassword: e.target.value,
+                })
+              }
+              variant="outlined"
+              margin="normal"
+            />
+            <TextField
+              fullWidth
+              type="password"
+              label={t("profile.confirmPassword")}
+              value={passwordForm.confirmPassword}
+              onChange={(e) =>
+                setPasswordForm({
+                  ...passwordForm,
+                  confirmPassword: e.target.value,
+                })
+              }
+              variant="outlined"
+              margin="normal"
+            />
+          </PasswordDialogContent>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClosePasswordDialog} variant="outlined">
@@ -217,6 +228,6 @@ function ProfilePage() {
           </Button>
         </DialogActions>
       </Dialog>
-    </Box>
+    </ProfilePageContainer>
   );
 }

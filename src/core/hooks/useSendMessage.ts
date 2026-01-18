@@ -1,10 +1,11 @@
-import type { SendMessagePayload, Message } from "../schemas/messageSchema";
 import { useMutation } from "@tanstack/react-query";
-import { messageService } from "@/services/messageService";
 import {
-  sendMessagePayloadSchema,
   messageSchema,
-} from "../schemas/messageSchema";
+  sendMessagePayloadSchema,
+  type Message,
+  type SendMessagePayload,
+} from "../schemas";
+import { messageService } from "../services";
 
 export const useSendMessage = () => {
   return useMutation<Message, Error, SendMessagePayload>({

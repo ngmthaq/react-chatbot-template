@@ -1,10 +1,11 @@
-import type { LoginCredentials, LoginResponse } from "../schemas/authSchema";
 import { useMutation } from "@tanstack/react-query";
-import { authService } from "@/services/authService";
 import {
   loginCredentialsSchema,
   loginResponseSchema,
-} from "../schemas/authSchema";
+  type LoginCredentials,
+  type LoginResponse,
+} from "../schemas";
+import { authService } from "../services";
 
 export const useLogin = () => {
   return useMutation<LoginResponse, Error, LoginCredentials>({

@@ -18,6 +18,12 @@ import { createFileRoute, Outlet } from "@tanstack/react-router";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/img/vite.svg";
+import {
+  GuestLayoutContainer,
+  LogoSection,
+  MenuSection,
+  ContentContainer,
+} from "./-styled";
 
 export const Route = createFileRoute("/_guest")({
   component: GuestLayout,
@@ -49,10 +55,10 @@ function GuestLayout() {
   };
 
   return (
-    <Box>
+    <GuestLayoutContainer>
       <AppBar position="static">
         <Toolbar sx={{ gap: 1 }}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <LogoSection>
             <Box
               component="img"
               src={logo}
@@ -62,10 +68,8 @@ function GuestLayout() {
             <Typography variant="h6" component="div">
               {window.__ENV__?.VITE_PUBLIC_APP_NAME || ""}
             </Typography>
-          </Box>
-          <Box
-            sx={{ ml: "auto", display: "flex", alignItems: "center", gap: 1 }}
-          >
+          </LogoSection>
+          <MenuSection>
             <IconButton onClick={handleMenuOpen} color="inherit" title="Menu">
               <MenuIcon />
             </IconButton>
@@ -103,12 +107,12 @@ function GuestLayout() {
                 </ListItemText>
               </MenuItem>
             </Menu>
-          </Box>
+          </MenuSection>
         </Toolbar>
       </AppBar>
-      <Box sx={{ marginTop: 2 }}>
+      <ContentContainer>
         <Outlet />
-      </Box>
-    </Box>
+      </ContentContainer>
+    </GuestLayoutContainer>
   );
 }

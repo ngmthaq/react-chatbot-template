@@ -1,6 +1,6 @@
-import { useQuery, queryOptions } from "@tanstack/react-query";
-import { queryKeys } from "@/core/constants/queryKeys";
-import { authService } from "@/services/authService";
+import { queryOptions, useQuery } from "@tanstack/react-query";
+import { queryKeys } from "../constants";
+import { authService } from "../services";
 
 export const checkAuthOptions = queryOptions({
   queryKey: queryKeys.auth.check(),

@@ -1,7 +1,5 @@
 import {
-  Box,
   Container,
-  Paper,
   TextField,
   Button,
   Typography,
@@ -13,6 +11,7 @@ import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
 import * as yup from "yup";
 import { useLogin } from "@/core/hooks/useLogin";
+import { LoginContainer, LoginPaper } from "./-styled";
 
 export const Route = createLazyFileRoute("/_guest/login/")({
   component: LoginPage,
@@ -54,8 +53,8 @@ function LoginPage() {
 
   return (
     <Container maxWidth="sm">
-      <Box sx={{ marginTop: 8 }}>
-        <Paper sx={{ p: 4, width: "100%", maxWidth: 450 }}>
+      <LoginContainer>
+        <LoginPaper>
           <Typography variant="h4" align="center" gutterBottom>
             {t("login.title")}
           </Typography>
@@ -136,8 +135,8 @@ function LoginPage() {
               <Link to="/password/forgot">{t("login.forgot")}</Link>
             </Typography>
           </Stack>
-        </Paper>
-      </Box>
+        </LoginPaper>
+      </LoginContainer>
     </Container>
   );
 }

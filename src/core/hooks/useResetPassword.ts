@@ -1,13 +1,11 @@
-import type {
-  ResetPasswordPayload,
-  ResetPasswordResponse,
-} from "../schemas/authSchema";
 import { useMutation } from "@tanstack/react-query";
-import { authService } from "@/services/authService";
 import {
   resetPasswordPayloadSchema,
   resetPasswordResponseSchema,
-} from "../schemas/authSchema";
+  type ResetPasswordPayload,
+  type ResetPasswordResponse,
+} from "../schemas";
+import { authService } from "../services";
 
 export const useResetPassword = () => {
   return useMutation<ResetPasswordResponse, Error, ResetPasswordPayload>({

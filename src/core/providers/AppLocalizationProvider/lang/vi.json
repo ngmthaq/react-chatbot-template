@@ -134,7 +134,9 @@
       "send": "Gửi",
       "deleteConversation": "Xóa",
       "noConversations": "Chưa có cuộc trò chuyện nào",
-      "startChatting": "Bắt đầu cuộc trò chuyện mới"
+      "startChatting": "Bắt đầu cuộc trò chuyện mới",
+      "hideSidebar": "Ẩn thanh bên",
+      "showSidebar": "Hiện thanh bên"
     }
   }
 }

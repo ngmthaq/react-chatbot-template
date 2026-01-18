@@ -1,10 +1,11 @@
-import type { RegisterPayload, RegisterResponse } from "../schemas/authSchema";
 import { useMutation } from "@tanstack/react-query";
-import { authService } from "@/services/authService";
 import {
   registerPayloadSchema,
   registerResponseSchema,
-} from "../schemas/authSchema";
+  type RegisterPayload,
+  type RegisterResponse,
+} from "../schemas";
+import { authService } from "../services";
 
 export const useRegister = () => {
   return useMutation<RegisterResponse, Error, RegisterPayload>({

@@ -1,3 +1,4 @@
+import { API_ENDPOINTS } from "@/core/constants";
 import type {
   PaginationPayload,
   PaginatedResponse,
@@ -5,14 +6,17 @@ import type {
   Message,
   SendMessagePayload,
   MessageServiceType,
-} from "@/core/schemas/messageSchema";
-import { api } from "@/core/utils/api";
+} from "@/core/schemas";
+import { api } from "@/core/utils";
 
 class MessageService implements MessageServiceType {
   async getConversations(
     pagination: PaginationPayload,
   ): Promise<PaginatedResponse<Conversation>> {
-    const response = await api.get("/conversations", pagination);
+    const response = await api.get(
+      API_ENDPOINTS.conversations.list,
+      pagination,
+    );
     return response.data;
   }
 
@@ -21,14 +25,14 @@ class MessageService implements MessageServiceType {
     pagination: PaginationPayload,
   ): Promise<PaginatedResponse<Message>> {
     const response = await api.get(
-      `/conversations/${conversationId}/messages`,
+      API_ENDPOINTS.conversations.messages.replace(":id", conversationId),
       pagination,
     );
     return response.data;
   }
 
   async sendMessage(payload: SendMessagePayload): Promise<Message> {
-    const response = await api.post("/messages", payload);
+    const response = await api.post(API_ENDPOINTS.messages.send, payload);
     return response.data;
   }
 }

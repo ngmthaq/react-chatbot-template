@@ -1,13 +1,11 @@
 import {
-  Box,
   Container,
-  Paper,
   TextField,
   Button,
   Typography,
   Alert,
-  LinearProgress,
   Stack,
+  Box,
 } from "@mui/material";
 import {
   createLazyFileRoute,
@@ -20,6 +18,13 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import * as yup from "yup";
 import { useResetPassword } from "@/core/hooks/useResetPassword";
+import {
+  ResetPasswordContainer,
+  ResetPasswordPaper,
+  PasswordStrengthContainer,
+  PasswordStrengthBar,
+  PasswordStrengthText,
+} from "./-styled";
 
 export const Route = createLazyFileRoute("/_guest/password/reset/")({
   component: ResetPasswordPage,
@@ -79,8 +84,8 @@ function ResetPasswordPage() {
   if (!token) {
     return (
       <Container maxWidth="sm">
-        <Box sx={{ marginTop: 8 }}>
-          <Paper sx={{ p: 4, width: "100%", maxWidth: 450 }}>
+        <ResetPasswordContainer>
+          <ResetPasswordPaper>
             <Alert severity="error" sx={{ mb: 2 }}>
               {t("resetPassword.invalidToken")}
             </Alert>
@@ -91,8 +96,8 @@ function ResetPasswordPage() {
             >
               {t("resetPassword.requestNewLink")}
             </Button>
-          </Paper>
-        </Box>
+          </ResetPasswordPaper>
+        </ResetPasswordContainer>
       </Container>
     );
   }
@@ -100,8 +105,8 @@ function ResetPasswordPage() {
   if (success) {
     return (
       <Container maxWidth="sm">
-        <Box sx={{ marginTop: 8 }}>
-          <Paper sx={{ p: 4, width: "100%", maxWidth: 450 }}>
+        <ResetPasswordContainer>
+          <ResetPasswordPaper>
             <Typography
               variant="h5"
               align="center"
@@ -123,16 +128,16 @@ function ResetPasswordPage() {
             >
               {t("resetPassword.goToLogin")}
             </Button>
-          </Paper>
-        </Box>
+          </ResetPasswordPaper>
+        </ResetPasswordContainer>
       </Container>
     );
   }
 
   return (
     <Container maxWidth="sm">
-      <Box sx={{ marginTop: 8 }}>
-        <Paper sx={{ p: 4, width: "100%", maxWidth: 450 }}>
+      <ResetPasswordContainer>
+        <ResetPasswordPaper>
           <Typography variant="h4" align="center" gutterBottom>
             {t("resetPassword.title")}
           </Typography>
@@ -164,11 +169,10 @@ function ResetPasswordPage() {
                 helperText={formik.touched.password && formik.errors.password}
               />
               {formik.values.password && (
-                <Box sx={{ mt: 1 }}>
-                  <LinearProgress
+                <PasswordStrengthContainer>
+                  <PasswordStrengthBar
                     variant="determinate"
                     value={passwordStrength}
-                    sx={{ height: 8, borderRadius: 4 }}
                     color={
                       passwordStrength < 50
                         ? "error"
@@ -180,7 +184,7 @@ function ResetPasswordPage() {
                   <Typography
                     variant="caption"
                     color="textSecondary"
-                    sx={{ mt: 0.5, display: "block" }}
+                    component={PasswordStrengthText}
                   >
                     {passwordStrength < 50
                       ? t("resetPassword.weakPassword")
@@ -188,7 +192,7 @@ function ResetPasswordPage() {
                         ? t("resetPassword.fairPassword")
                         : t("resetPassword.strongPassword")}
                   </Typography>
-                </Box>
+                </PasswordStrengthContainer>
               )}
             </Box>
 
@@ -231,8 +235,8 @@ function ResetPasswordPage() {
               <Link to="/login">{t("resetPassword.backToLogin")}</Link>
             </Typography>
           </Stack>
-        </Paper>
-      </Box>
+        </ResetPasswordPaper>
+      </ResetPasswordContainer>
     </Container>
   );
 }

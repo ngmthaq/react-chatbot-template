@@ -1,7 +1,9 @@
-import type { ForgotPasswordResponse } from "../schemas/authSchema";
 import { useMutation } from "@tanstack/react-query";
-import { authService } from "@/services/authService";
-import { forgotPasswordResponseSchema } from "../schemas/authSchema";
+import {
+  forgotPasswordResponseSchema,
+  type ForgotPasswordResponse,
+} from "../schemas";
+import { authService } from "../services";
 
 export const useForgotPassword = () => {
   return useMutation<ForgotPasswordResponse, Error, string>({

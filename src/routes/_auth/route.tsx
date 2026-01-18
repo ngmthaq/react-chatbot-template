@@ -25,8 +25,15 @@ import {
 } from "@tanstack/react-router";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { useGetUserProfile } from "@/core/hooks/useGetUserProfile";
+import { useGetUserProfile } from "@/core/hooks";
 import logo from "../../assets/img/vite.svg";
+import {
+  LayoutContainer,
+  LogoSection,
+  UserSection,
+  UserInfoContainer,
+  LogoutMenuItem,
+} from "./-styled";
 
 export const Route = createFileRoute("/_auth")({
   component: AuthLayout,
@@ -67,10 +74,10 @@ function AuthLayout() {
   };
 
   return (
-    <Box>
+    <LayoutContainer>
       <AppBar position="static">
         <Toolbar sx={{ gap: 1 }}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <LogoSection>
             <Box
               component="img"
               src={logo}
@@ -80,25 +87,16 @@ function AuthLayout() {
             <Typography variant="h6" component="div">
               {window.__ENV__?.VITE_PUBLIC_APP_NAME || ""}
             </Typography>
-          </Box>
-          <Box
-            sx={{ ml: "auto", display: "flex", alignItems: "center", gap: 1 }}
-          >
-            <Box
-              sx={{
-                display: { xs: "none", md: "flex" },
-                flexDirection: "column",
-                alignItems: "flex-end",
-                mr: 1,
-              }}
-            >
+          </LogoSection>
+          <UserSection>
+            <UserInfoContainer>
               <Typography variant="body2" sx={{ fontWeight: 500 }}>
                 {userProfile?.name || "User Name"}
               </Typography>
-              <Typography variant="caption" sx={{ color: "text.secondary" }}>
+              <Typography variant="caption">
                 {userProfile?.email || "user@example.com"}
               </Typography>
-            </Box>
+            </UserInfoContainer>
             <IconButton onClick={handleMenuOpen} color="inherit" title="Menu">
               <MenuIcon />
             </IconButton>
@@ -148,17 +146,17 @@ function AuthLayout() {
                 </ListItemText>
               </MenuItem>
               <Divider />
-              <MenuItem onClick={handleLogout} sx={{ color: "error.main" }}>
+              <LogoutMenuItem onClick={handleLogout}>
                 <ListItemIcon sx={{ color: "error.main" }}>
                   <LogoutIcon />
                 </ListItemIcon>
                 <ListItemText>{t("menu.logout")}</ListItemText>
-              </MenuItem>
+              </LogoutMenuItem>
             </Menu>
-          </Box>
+          </UserSection>
         </Toolbar>
       </AppBar>
       <Outlet />
-    </Box>
+    </LayoutContainer>
   );
 }
