@@ -98,6 +98,13 @@
         "passwordMatch": "Passwords must match"
       }
     },
+    "menu": {
+      "switchToDarkMode": "Switch to dark mode",
+      "switchToLightMode": "Switch to light mode",
+      "switchToVietnamese": "Switch to Vietnamese",
+      "switchToEnglish": "Switch to English",
+      "logout": "Logout"
+    },
     "profile": {
       "title": "Profile",
       "fullName": "Full Name",

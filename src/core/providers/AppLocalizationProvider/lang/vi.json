@@ -98,6 +98,13 @@
         "passwordMatch": "Mật khẩu phải khớp"
       }
     },
+    "menu": {
+      "switchToDarkMode": "Chuyển sang chế độ tối",
+      "switchToLightMode": "Chuyển sang chế độ sáng",
+      "switchToVietnamese": "Chuyển sang tiếng Việt",
+      "switchToEnglish": "Chuyển sang tiếng Anh",
+      "logout": "Đăng xuất"
+    },
     "profile": {
       "title": "Hồ sơ",
       "fullName": "Họ và Tên",
